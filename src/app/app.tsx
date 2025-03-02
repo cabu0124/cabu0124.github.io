@@ -5,7 +5,6 @@ import About from "../sections/about";
 import Contact from "../sections/contact";
 import Header from "../sections/header";
 import Footer from "../sections/footer";
-import './global.css'
 
 function App() {
   return (
