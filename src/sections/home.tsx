@@ -1,5 +1,9 @@
+import Hero from '../components/hero';
+
 const Home = () => {
-    return <div className="text-center text-lg">Welcome to the Home Page</div>;
+    return (
+        <Hero />
+    );
 };
 
 export default Home;
