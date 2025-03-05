@@ -11,25 +11,27 @@ import HeroOrbit from './hero-orbit';
 const Hero = () => {
     return (
         <div className="py-32 md:py-36 lg:py-48 relative z-0 overflow-x-clip">
-            <div
-                className="absolute inset-0 -z-30 opacity-5"
-                style={{
-                    backgroundImage: `url(${grainImage})`
-                }}
-            ></div>
-            <div className="size-[620px] hero-ring"></div>
-            <div className="size-[820px] hero-ring"></div>
-            <div className="size-[1020px] hero-ring"></div>
-            <div className="size-[1220px] hero-ring"></div>
-            <HeroOrbit srcIcon={planetIcon} size={800} rotation={-72} imgSize='size-28' />
-            <HeroOrbit srcIcon={earthIcon} size={550} rotation={20} imgSize='size-12' />
-            <HeroOrbit srcIcon={worldIcon} size={590} rotation={98} imgSize='size-8' />
-            <HeroOrbit srcIcon={starIcon} size={430} rotation={-14} imgSize='size-8' />
-            <HeroOrbit srcIcon={starIcon} size={440} rotation={79} imgSize='size-5' />
-            <HeroOrbit srcIcon={starIcon} size={530} rotation={178} imgSize='size-10' />
-            <HeroOrbit srcIcon={starIcon} size={710} rotation={144} imgSize='size-14' />
-            <HeroOrbit srcIcon={starIcon} size={710} rotation={144} imgSize='size-14' />
-            <div className="container">
+            <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+                <div
+                    className="absolute inset-0 -z-30 opacity-5"
+                    style={{
+                        backgroundImage: `url(${grainImage})`
+                    }}
+                ></div>
+                <div className="size-[620px] hero-ring"></div>
+                <div className="size-[820px] hero-ring"></div>
+                <div className="size-[1020px] hero-ring"></div>
+                <div className="size-[1220px] hero-ring"></div>
+                <HeroOrbit srcIcon={planetIcon} size={800} rotation={-72} imgSize='size-28' />
+                <HeroOrbit srcIcon={earthIcon} size={550} rotation={20} imgSize='size-12' />
+                <HeroOrbit srcIcon={worldIcon} size={590} rotation={98} imgSize='size-8' />
+                <HeroOrbit srcIcon={starIcon} size={430} rotation={-14} imgSize='size-8' />
+                <HeroOrbit srcIcon={starIcon} size={440} rotation={79} imgSize='size-5' />
+                <HeroOrbit srcIcon={starIcon} size={530} rotation={178} imgSize='size-10' />
+                <HeroOrbit srcIcon={starIcon} size={710} rotation={144} imgSize='size-14' />
+                <HeroOrbit srcIcon={starIcon} size={710} rotation={144} imgSize='size-14' />
+            </div>
+            <div>
                 <div className="flex flex-col items-center">
                     <img
                         src={brainImage}
@@ -44,9 +46,9 @@ const Hero = () => {
                         <div className="text-sm font-medium">Available for new projects</div>
                     </div>
                 </div>
-                <div className="max-w-3xl mx-auto">
+                <div className="max-w-3xl mx-auto px-4">
                     <h1 className="font-serif text-2xl md:text-5xl text-center mt-8 tracking-wide">
-                        Software Engineer & Technical Leader 
+                        Software Engineer & Game Developer Enthusiast
                     </h1>
                     <p className="mt-4 text-center text-white/60 md:text-lg">
                         I'm a software engineer and technical leader passionate about designing, developing, and optimizing robust applications. My focus is on delivering high-quality solutions that meet business needs and provide excellent user experiences. I enjoy working in teams, solving problems, and creating impactful solutions. I’m passionate about leading development teams, sharing ideas, and achieving great results together.

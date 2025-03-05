@@ -1,10 +1,13 @@
 import Hero from '../components/hero';
+import Projects from '../sections/projects';
 
 const Home = () => {
     return (
-        <Hero />
+        <div>
+            <Hero />
+            <Projects />
+        </div>
     );
 };
 
 export default Home;
-  

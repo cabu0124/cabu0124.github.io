@@ -6,25 +6,6 @@ import Contact from "../sections/contact";
 import Header from "../sections/header";
 //import Footer from "../sections/footer";
 
-/* function App() {
-  return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-grow p-4 flex items-center justify-center w-full">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-} */
-
 function App() {
   return (
     <Router>
