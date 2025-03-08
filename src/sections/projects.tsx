@@ -42,8 +42,8 @@ const Projects = () => {
                 description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore necessitatibus maiores magnam reiciendis soluta obcaecati omnis culpa id natus. Consequatur dolorum molestiae maiores velit cupiditate ad ipsum, unde dignissimos. Animi?"
             />
             <div className="flex flex-col mt-10 gap-20">
-                {portfolioProjects.map(project => (
-                    <Feature label={project.company} year={project.year} title={project.title} description={project.description} imgUrl={project.image} link={project.link} />
+                {portfolioProjects.map((project, index) => (
+                    <Feature index={index} label={project.company} year={project.year} title={project.title} description={project.description} imgUrl={project.image} link={project.link} />
                 ))}
             </div>
         </div>

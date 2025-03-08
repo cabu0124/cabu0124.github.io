@@ -1,4 +1,5 @@
 type FeatureProps = {
+    index: number;
     label: string;
     year: string;
     title: string;
@@ -7,9 +8,13 @@ type FeatureProps = {
     link: string;
 };
 
-export default function Feature({ label, year, title, description, imgUrl, link }: FeatureProps) {
+export default function Feature({ index, label, year, title, description, imgUrl, link }: FeatureProps) {
     return (
-        <div className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none px-8 pt-8 sm:h-full lg:h-[420px] w-full max-w-7xl mx-auto">
+        <div className="bg-gray-800 rounded-3xl z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none px-8 pt-8 sm:h-full lg:h-[420px] w-full max-w-7xl mx-auto sticky top-16"
+            style={{
+                top: `calc(64px + ${index * 30}px)`
+            }}
+        >
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="lg:pt-4 lg:pr-8">

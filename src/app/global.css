@@ -1,5 +1,32 @@
 @import "tailwindcss";
-@tailwind utilities;
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1200px;
+
+  /* Container */
+  --container-padding: 1rem;
+  --container-padding-md: 2rem;
+
+  /* Animaciones personalizadas */
+  --animate-float: float 1s ease-in-out infinite;
+  --animate-ping-large: ping-large 1s ease-in-out infinite;
+
+  /* Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes ping-large {
+    75%, 100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+}
 
 body {
   @apply bg-gray-900 text-white antialiased;
@@ -7,20 +34,11 @@ body {
 }
 
 @layer base {
-    .nav-item {
-        @apply px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
-    }
-
-    .hero-ring {
-        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
-    }
-}
-
-@keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+  .nav-item {
+    @apply px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
   }
+
+  .hero-ring {
+    @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
+  }
+}
