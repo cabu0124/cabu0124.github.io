@@ -17,12 +17,12 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="relative z-1 flex flex-col items-center">
-      <div className="absolute w-full h-full bottom-0 left-1/2 -translate-x-1/2 bg-blue-600/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] -z-10"></div>
-      <div className="container">
-        <div className="border-t border-white/15 py-6 text-sm flex flex-col items-center gap-8">
+    <footer className="relative z-1 flex flex-col items-center overflow-x-clip">
+      <div className="absolute w-full h-full bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/10 [mask-image:linear-gradient(to_top,black,transparent)] -z-10"></div>
+      <div className="container px-10 md:px-20">
+        <div className="border-t border-white/15 py-6 text-sm flex flex-col md:flex-row md:justify-between items-center gap-8">
           <div className="text-white/40">&copy; 2025. All rights reserved.</div>
-          <nav className="flex flex-col items-center gap-8">
+          <nav className="flex flex-col md:flex-row items-center gap-8">
             {footerLinks.map(link => (
               <a href={link.url} key={link.title} className="inline-flex items-center gap-1.5">
                 <span className="font-semibold">{link.title}</span>

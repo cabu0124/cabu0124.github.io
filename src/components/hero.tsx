@@ -38,8 +38,11 @@ const Hero = () => {
                         alt="Brain Image"
                         width={80}
                         height={80}
-                        loading="lazy" // Activa carga diferida
-                        className="rounded-lg shadow-lg py-2"
+                        loading="lazy"
+                        className="rounded-lg shadow-lg py-2 animate-float"
+                        style={{
+                            animation: "float 1s ease-in-out infinite",
+                        }}
                     />
                     <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-3 rounded-lg">
                         <div className="bg-green-500 size-2.5 rounded-full"></div>
