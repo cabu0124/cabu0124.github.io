@@ -58,7 +58,7 @@ const Hero = () => {
                         Software Engineer & Game Developer Enthusiast
                     </h1>
                     <p className="mt-4 text-center text-white/60 md:text-lg">
-                        I'm a software engineer and technical leader passionate about designing, developing, and optimizing robust applications. My focus is on delivering high-quality solutions that meet business needs and provide excellent user experiences. I enjoy working in teams, solving problems, and creating impactful solutions. I’m passionate about leading development teams, sharing ideas, and achieving great results together.
+                        I believe nothing is out of reach — just a matter of putting in the effort.
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">

@@ -8,42 +8,49 @@ type FeatureProps = {
     link: string;
 };
 
-export default function Feature({ index, label, year, title, description, imgUrl, link }: FeatureProps) {
+export default function Feature({
+    index,
+    label,
+    year,
+    title,
+    description,
+    imgUrl,
+    link,
+}: FeatureProps) {
     return (
-        <div className="bg-gray-800 rounded-3xl z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none px-8 pt-8 sm:h-full lg:h-[420px] w-full max-w-7xl mx-auto sticky top-16"
+        <div
+            className="bg-gray-900 rounded-3xl z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/15 after:pointer-events-none px-8 pt-8 sm:h-full lg:h-[420px] w-full max-w-7xl mx-auto sticky top-16 hover:bg-gray-800 transition-all duration-300"
             style={{
-                top: `calc(64px + ${index * 30}px)`
+                top: `calc(64px + ${index * 30}px)`,
             }}
         >
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="lg:pt-4 lg:pr-8">
                         <div className="lg:max-w-lg">
-                            <h2 className="text-base/7 bg-gradient-to-r from-blue-700 to-white inline-flex gap-2.5 font-bold uppercase tracking-widest text-transparent bg-clip-text">
+                            <h2 className="text-base/7 bg-gradient-to-r from-blue-500 to-white inline-flex gap-2.5 font-bold uppercase tracking-widest text-transparent bg-clip-text">
                                 <span>{label}</span>
-                                <span>&bull;</span>
+                                <span>•</span>
                                 <span>{year}</span>
                             </h2>
-                            <p className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-white sm:text-4xl">
+                            <p className="mt-2 text-3xl font-serif tracking-tight text-white/90 sm:text-4xl">
                                 {title}
                             </p>
-                            <p className="mt-6 text-lg/8 text-white/50">
-                                {description}
-                            </p>
-                            <a href={link}>
-                                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                            <p className="mt-6 text-lg/8 text-white/70">{description}</p>
+                            <a href={link} target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white/90 text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-white transition-colors shadow-md">
                                     <span>View</span>
                                 </button>
                             </a>
                         </div>
                     </div>
                     <img
-                        alt="Feature Image"
+                        alt={title}
                         src={imgUrl}
-                        className="w-[30rem] max-w-none rounded-xl ring-1 shadow-xl ring-gray-400/10 sm:w-[40rem] md:-ml-4 lg:-ml-0"
+                        className="w-[30rem] max-w-none rounded-xl shadow-2xl ring-1 ring-white/10 sm:w-[40rem] md:-ml-4 lg:-ml-0 hover:scale-[1.02] transition-transform duration-300"
                     />
                 </div>
             </div>
         </div>
-    )
+    );
 }
