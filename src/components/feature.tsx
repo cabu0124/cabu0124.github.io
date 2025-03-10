@@ -28,7 +28,7 @@ export default function Feature({
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="lg:pt-4 lg:pr-8">
                         <div className="lg:max-w-lg">
-                            <h2 className="text-base/7 bg-gradient-to-r from-blue-500 to-white inline-flex gap-2.5 font-bold uppercase tracking-widest text-transparent bg-clip-text">
+                            <h2 className="text-base/7 bg-gradient-to-r from-label to-white inline-flex gap-2.5 font-bold uppercase tracking-widest text-transparent bg-clip-text">
                                 <span>{label}</span>
                                 <span>•</span>
                                 <span>{year}</span>
@@ -39,7 +39,7 @@ export default function Feature({
                             <p className="mt-6 text-lg/8 text-white/70">{description}</p>
                             <a href={link} target="_blank" rel="noopener noreferrer">
                                 <button className="bg-white/90 text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-white transition-colors shadow-md">
-                                    <span>View</span>
+                                    <span>Explore</span>
                                 </button>
                             </a>
                         </div>

@@ -2,8 +2,8 @@ import infinityTowerImg from '../assets/images/infinity-tower.png'
 import movieSearcherImg from '../assets/images/movie-searcher.png'
 import asesoresLBAImg from '../assets/images/asesores-lba.png'
 //import grainImg from '../assets/images/grain.jpg'
-import Feature from '../components/feature';
-import SectionHeader from '../components/section-header';
+import Feature from './feature';
+import SectionHeader from './section-header';
 //import checkIcon from '../assets/icons/check-mark.svg';
 
 const portfolioProjects = [

@@ -8,7 +8,7 @@ const SectionHeader = ({ label, title, description }: SectionHeaderProps) => {
     return (
         <>
             <div className="flex justify-center">
-                <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-blue-700 to-white text-transparent bg-clip-text">
+                <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-label to-white text-transparent bg-clip-text">
                     {label}
                 </p>
             </div>

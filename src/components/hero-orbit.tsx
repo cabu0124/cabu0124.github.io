@@ -1,20 +1,23 @@
+import { FC, SVGProps } from 'react';
+//import planetIcon from '../assets/icons/ringed-planet.svg';
+
 type HeroOrbitProps = {
-    srcIcon: string;
-    size: number;
+    srcIcon: FC<SVGProps<SVGSVGElement>>;
+    radio: number;
     rotation: number;
-    imgSize: string; // Clase opcional de Tailwind para la 
+    customStyle: string;
     orbitAnimation?: string;
     rotateAnimation?: string;
 };
 
-const HeroOrbit = ({ srcIcon, size, rotation, imgSize, orbitAnimation = '', rotateAnimation = '' }: HeroOrbitProps) => {
+const HeroOrbit = ({ srcIcon: Icon, radio, rotation, customStyle, orbitAnimation = '', rotateAnimation = '' }: HeroOrbitProps) => {
     return (
         <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-20 ${orbitAnimation}`}>
             <div
                 className="flex items-start justify-start"
                 style={{
-                    height: `${size}px`,
-                    width: `${size}px`,
+                    height: `${radio}px`,
+                    width: `${radio}px`,
                     transform: `rotate(${rotation}deg)`,
                 }}
             >
@@ -24,12 +27,7 @@ const HeroOrbit = ({ srcIcon, size, rotation, imgSize, orbitAnimation = '', rota
                             transform: `rotate(${rotation - 1}deg)`,
                         }}
                     >
-                        <img
-                            src={srcIcon}
-                            alt="Star Icon"
-                            loading="lazy"
-                            className={`${imgSize}`}
-                        />
+                        <Icon className={`${customStyle}`} />
                     </div>
                 </div>
             </div>

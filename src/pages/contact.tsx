@@ -1,4 +1,5 @@
 import grainImage from "../assets/images/grain.jpg";
+import ArrowUpIcon from '../assets/icons/arrow-up-right.svg?react';
 
 const Contact = () => {
     return (
@@ -13,7 +14,7 @@ const Contact = () => {
 
             <div className="max-w-4xl mx-auto px-4 text-center">
                 {/* Título */}
-                <h2 className="text-3xl md:text-4xl font-serif tracking-tight text-white/90 bg-gradient-to-r from-blue-500 to-white bg-clip-text">
+                <h2 className="text-3xl md:text-4xl font-serif tracking-tight text-white">
                     Let's Connect and Create Something Amazing!
                 </h2>
 
@@ -31,22 +32,7 @@ const Contact = () => {
                         className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-900/70 text-white font-semibold text-center rounded-xl border border-white/20 shadow-lg hover:bg-gray-800/80 hover:shadow-xl transition-all duration-300"
                     >
                         <span>Contact Me</span>
-                        <span className="text-amber-500">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 18 18"
-                                className="w-5 h-5"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <path d="M5.25 12.75 L12.75 5.25" />
-                                <path d="M5.25 5.25 L12.75 5.25 L12.75 12.75" />
-                            </svg>
-                        </span>
-
+                        <ArrowUpIcon className="text-icon" />
                     </a>
                 </div>
             </div>

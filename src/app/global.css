@@ -11,6 +11,10 @@
   --container-padding: 1rem;
   --container-padding-md: 2rem;
 
+  /* Colores personalizados */
+  --color-icon: var(--color-amber-500); /* Azul oscuro */
+  --color-label: var(--color-amber-500); /* Verde esmeralda */
+
   /* Animaciones personalizadas */
   --animate-float: float 1s ease-in-out infinite;
   --animate-ping-large: ping-large 1s ease-in-out infinite;

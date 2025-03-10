@@ -1,7 +1,6 @@
 import SectionHeader from "../components/section-header";
 import grainImage from "../assets/images/grain.jpg";
-// Descomenta esta línea si prefieres importar el CSS directamente aquí
-// import 'devicon/devicon.min.css';
+import CheckIcon from "../assets/icons/check-mark.svg?react"
 
 const About = () => {
     // Lista de habilidades con íconos de Devicon
@@ -105,7 +104,7 @@ const About = () => {
     ];
 
     return (
-        <div className="relative py-24 md:py-32 lg:py-40 text-white overflow-x-clip">
+        <div className="relative py-10 md:py-16 lg:py-20 text-white overflow-x-clip">
             {/* Fondo con grano */}
             <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
                 <div
@@ -125,36 +124,29 @@ const About = () => {
                 />
 
                 {/* Subsección de Fortalezas y Habilidades */}
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="mt-12 grid grid-cols-1 sm:justify-items-center md:grid-cols-[30%_70%] gap-6">
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 text-white/90">
-                            My Strengths
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-4 text-white/90">My Strengths</h3>
                         <ul className="space-y-2">
-                            {["Team Work", "Creativity", "Motivator & Leader"].map(
-                                (strength) => (
-                                    <li
-                                        key={strength}
-                                        className="flex items-center gap-2 text-white/70"
-                                    >
-                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                                        {strength}
-                                    </li>
-                                )
-                            )}
+                            {["Team Work", "Creativity", "Motivator & Leader"].map((strength) => (
+                                <li key={strength} className="flex items-center gap-2 text-white/70">
+                                    <CheckIcon className="text-icon size-5" />
+                                    {strength}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 text-white/90">
-                            Languages and Tools
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-4 text-white/90">Languages and Tools</h3>
                         <div className="flex flex-wrap gap-4">
                             {skills.map((skill) => (
                                 <div
                                     key={skill.name}
                                     className="group relative p-2 bg-gray-800/50 border border-white/15 rounded-lg hover:bg-gray-700/50 transition-colors"
                                 >
-                                    <i className={`${skill.icon} text-4xl text-white/80 group-hover:text-white transition-colors`}></i>
+                                    <i
+                                        className={`${skill.icon} text-4xl text-white/80 group-hover:text-white group-hover:scale-110 inline-block transition-transform duration-300`}
+                                    ></i>
                                     <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white/90 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
                                         {skill.name.charAt(0).toUpperCase() + skill.name.slice(1)}
                                     </span>
@@ -166,9 +158,11 @@ const About = () => {
 
                 {/* Subsección de Educación */}
                 <div className="mt-16">
-                    <h3 className="text-2xl md:text-3xl font-serif text-center tracking-wide mb-4 text-white/90">
-                        My Education
-                    </h3>
+                    <div className="flex justify-center text-2xl md:text-3xl mb-4">
+                        <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-label to-white text-transparent bg-clip-text">
+                            My Education
+                        </p>
+                    </div>
                     <p className="text-center text-white/60 mb-8">
                         A summary of my academic journey and qualifications.
                     </p>
@@ -207,9 +201,11 @@ const About = () => {
 
                 {/* Subsección de Experiencia Laboral */}
                 <div className="mt-16">
-                    <h3 className="text-2xl md:text-3xl font-serif text-center tracking-wide mb-4 text-white/90">
-                        My Experience
-                    </h3>
+                    <div className="flex justify-center text-2xl md:text-3xl mb-4">
+                        <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-label to-white text-transparent bg-clip-text">
+                            My Experience
+                        </p>
+                    </div>
                     <p className="text-center text-white/60 mb-8">
                         A summary of my professional journey and key roles.
                     </p>
