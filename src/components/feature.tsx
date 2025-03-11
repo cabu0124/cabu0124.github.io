@@ -1,3 +1,5 @@
+import ButtonIcon from "../assets/icons/arrow-right.svg?react"
+
 type FeatureProps = {
     index: number;
     label: string;
@@ -38,8 +40,9 @@ export default function Feature({
                             </p>
                             <p className="mt-6 text-lg/8 text-white/70">{description}</p>
                             <a href={link} target="_blank" rel="noopener noreferrer">
-                                <button className="bg-white/90 text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-white transition-colors shadow-md">
+                                <button className="bg-white/90 text-gray-950 h-12 w-full rounded-xl font-bold inline-flex items-center justify-center gap-2 mt-8 hover:bg-white transition-colors shadow-md cursor-pointer group">
                                     <span>Explore</span>
+                                    <ButtonIcon className="text-gray-950 size-5 group-hover:-rotate-45 transition-transform duration-300" />
                                 </button>
                             </a>
                         </div>

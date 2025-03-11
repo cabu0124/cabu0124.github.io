@@ -1,5 +1,6 @@
 import grainImage from "../assets/images/grain.jpg";
-import ArrowUpIcon from '../assets/icons/arrow-up-right.svg?react';
+import ArrowRightIcon from "../assets/icons/arrow-right.svg?react";
+import { siteConfig } from "../app/config"
 
 const Contact = () => {
     return (
@@ -25,14 +26,11 @@ const Contact = () => {
 
                 {/* Botón de LinkedIn */}
                 <div className="mt-8">
-                    <a
-                        href="https://www.linkedin.com/in/cabu0124"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-900/70 text-white font-semibold text-center rounded-xl border border-white/20 shadow-lg hover:bg-gray-800/80 hover:shadow-xl transition-all duration-300"
-                    >
-                        <span>Contact Me</span>
-                        <ArrowUpIcon className="text-icon" />
+                    <a href={siteConfig.contact[0].link} target="_blank" rel="noopener noreferrer">
+                        <button className="inline-flex items-center gap-2 border border-white/20 shadow-lg px-6 h-12 rounded-xl bg-gray-900/70 text-white font-semibold hover:bg-gray-800/80 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                            <span className="font-semibold">Contact Me</span>
+                            <ArrowRightIcon className="text-icon size-5 group-hover:-rotate-45 transition-transform duration-300" />
+                        </button>
                     </a>
                 </div>
             </div>

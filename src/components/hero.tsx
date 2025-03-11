@@ -10,6 +10,8 @@ import PlanetIcon from '../assets/icons/ringed-planet.svg?react';
 import EyeIcon from '../assets/icons/eyeball.svg?react';
 import ClickIcon from '../assets/icons/click.svg?react';
 
+import { siteConfig } from "../app/config"
+
 const Hero = () => {
     return (
         <div className="py-32 md:py-36 lg:py-48 relative z-0 overflow-x-clip">
@@ -101,10 +103,10 @@ const Hero = () => {
                 </div>
                 <div className="max-w-3xl mx-auto px-4">
                     <h1 className="font-serif text-2xl md:text-5xl text-center mt-8 tracking-wide">
-                        Software Engineer & Game Developer Enthusiast
+                        {siteConfig.about.title}
                     </h1>
                     <p className="mt-4 text-center text-white/60 md:text-lg">
-                        I believe nothing is out of reach — just a matter of putting in the effort.
+                        {siteConfig.about.phrase}
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">

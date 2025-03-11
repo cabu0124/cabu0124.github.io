@@ -1,8 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import SectionHeader from "../components/section-header";
 import grainImage from "../assets/images/grain.jpg";
-import ArrowUpIcon from '../assets/icons/arrow-up-right.svg?react';
+import ArrowRightIcon from "../assets/icons/arrow-right.svg?react";
+import { siteConfig } from "../app/config"
 
 const SectionAbout = () => {
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate("/about");
+    };
+
     return (
         <div className="relative py-24 md:py-32 lg:py-40 text-white overflow-x-clip">
             {/* Fondo con grano */}
@@ -18,19 +26,19 @@ const SectionAbout = () => {
             <div className="max-w-4xl mx-auto px-4">
                 {/* Introducción principal con SectionHeader */}
                 <SectionHeader
-                    label="Passionate About Innovation"
+                    label={siteConfig.about.label}
                     title="About Me"
-                    description="I'm a software engineer and technical leader passionate about designing, developing, and optimizing robust applications. My focus is on delivering high-quality solutions that meet business needs and provide excellent user experiences. I enjoy working in teams, solving problems, and creating impactful solutions. I’m passionate about leading development teams, sharing ideas, and achieving great results together."
+                    description={siteConfig.about.description}
                 />
-                {/* Botón de LinkedIn */}
-                <div className="mt-8">
-                    <a
-                        href="#"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-900/70 text-white font-semibold text-center rounded-xl border border-white/20 shadow-lg hover:bg-gray-800/80 hover:shadow-xl transition-all duration-300"
+                {/* Botón de navegación a /about (centrado) */}
+                <div className="mt-8 flex justify-center">
+                    <button
+                        onClick={handleNavigate}
+                        className="inline-flex items-center gap-2 border border-white/20 shadow-lg px-6 h-12 rounded-xl bg-gray-900/70 text-white font-semibold hover:bg-gray-800/80 hover:shadow-xl transition-all duration-300 cursor-pointer group"
                     >
-                        <span>Know more</span>
-                        <ArrowUpIcon className="text-icon" />
-                    </a>
+                        <span className="font-semibold">Know more</span>
+                        <ArrowRightIcon className="text-icon size-5 group-hover:-rotate-45 transition-transform duration-300" />
+                    </button>
                 </div>
             </div>
         </div>

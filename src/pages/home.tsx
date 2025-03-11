@@ -6,7 +6,7 @@ import Contact from './contact';
 const Home = () => {
     return (
         <div>
-            <section id="hero">
+            <section id="home">
                 <Hero />
             </section>
             <section id="projects">

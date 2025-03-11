@@ -1,4 +1,4 @@
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const Header = () => {
@@ -25,8 +25,8 @@ const Header = () => {
     <div className="flex justify-center items-center fixed top-3 w-full z-10">
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <button
-          onClick={() => handleNavClick('hero')}
-          className={`nav-item cursor-pointer ${location.hash === '#hero' ? 'bg-white text-gray-900' : ''}`}
+          onClick={() => handleNavClick('home')}
+          className={`nav-item cursor-pointer ${location.hash === '#home' ? 'bg-white text-gray-900' : ''}`}
         >
           Home
         </button>
@@ -36,14 +36,12 @@ const Header = () => {
         >
           Projects
         </button>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            `nav-item cursor-pointer ${isActive ? 'bg-white text-gray-900' : ''}`
-          }
+        <button
+          onClick={() => handleNavClick('about')}
+          className={`nav-item cursor-pointer ${location.hash === '#about' || location.pathname === '/about' ? 'bg-white text-gray-900' : ''}`}
         >
           About
-        </NavLink>
+        </button>
         <button
           onClick={() => handleNavClick('contact')}
           className={`nav-item cursor-pointer ${location.hash === '#contact' ? 'bg-white text-gray-900' : ''}`}

@@ -1,19 +1,5 @@
-import ArrowUpIcon from '../assets/icons/arrow-up-right.svg?react';
-
-const footerLinks = [
-  {
-    title: 'LinkedIn',
-    url: '#'
-  },
-  {
-    title: 'Github',
-    url: '#'
-  },
-  {
-    title: 'Youtube',
-    url: '#'
-  }
-]
+import ArrowRightIcon from "../assets/icons/arrow-right.svg?react";
+import { siteConfig } from "../app/config"
 
 const Footer = () => {
   return (
@@ -23,10 +9,12 @@ const Footer = () => {
         <div className="py-6 text-sm flex flex-col md:flex-row md:justify-between items-center gap-8">
           <div className="text-white/40">&copy; 2025. All rights reserved.</div>
           <nav className="flex flex-col md:flex-row items-center gap-8">
-            {footerLinks.map(link => (
-              <a href={link.url} key={link.title} className="inline-flex items-center gap-1.5">
-                <span className="font-semibold">{link.title}</span>
-                <ArrowUpIcon className='text-icon' />
+            {siteConfig.contact.map(option => (
+              <a href={option.link} key={option.text} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5">
+                <button className="inline-flex items-center gap-2 cursor-pointer group">
+                  <span className="font-semibold">{option.text}</span>
+                  <ArrowRightIcon className="text-icon size-5 group-hover:-rotate-45 transition-transform duration-300" />
+                </button>
               </a>
             ))}
           </nav>
