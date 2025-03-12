@@ -5,9 +5,15 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Función para manejar el clic y desplazamiento
+  // Función para manejar el clic y desplazamiento (para secciones con hashtag)
   const handleNavClick = (section: string) => {
     navigate(`/#${section}`);
+  };
+
+  // Función específica para navegar a la raíz (Home)
+  const handleHomeClick = () => {
+    navigate('/'); // Navega a la raíz
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Efecto para manejar el desplazamiento cuando cambias de ruta con un hash
@@ -19,14 +25,14 @@ const Header = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  }, [location]); // Depende de toda la location (pathname + hash)
+  }, [location]);
 
   return (
     <div className="flex justify-center items-center fixed top-3 w-full z-10">
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <button
-          onClick={() => handleNavClick('home')}
-          className={`nav-item cursor-pointer ${location.hash === '#home' ? 'bg-white text-gray-900' : ''}`}
+          onClick={handleHomeClick}
+          className={`nav-item cursor-pointer ${location.pathname === '/' && !location.hash ? 'bg-white text-gray-900' : ''}`}
         >
           Home
         </button>

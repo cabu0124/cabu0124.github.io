@@ -1,4 +1,5 @@
-import ButtonIcon from "../assets/icons/arrow-right.svg?react"
+import ButtonIcon from "../assets/icons/arrow-right.svg?react";
+import grainImage from "../assets/images/grain.jpg";
 
 type FeatureProps = {
     index: number;
@@ -8,6 +9,7 @@ type FeatureProps = {
     description: string;
     imgUrl: string;
     link: string;
+    bgcolor: string;
 };
 
 export default function Feature({
@@ -18,14 +20,25 @@ export default function Feature({
     description,
     imgUrl,
     link,
+    bgcolor,
 }: FeatureProps) {
     return (
         <div
-            className="bg-gray-900 rounded-3xl z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/15 after:pointer-events-none px-8 pt-8 sm:h-full lg:h-[420px] w-full max-w-7xl mx-auto sticky top-16 hover:bg-gray-800 transition-all duration-300"
+            className={`rounded-3xl z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/15 after:pointer-events-none px-8 pt-8 sm:h-full lg:h-[420px] w-full max-w-7xl mx-auto sticky top-16 transition-all duration-300 bg-${bgcolor}-900 hover:bg-${bgcolor}-800`}
             style={{
                 top: `calc(64px + ${index * 30}px)`,
             }}
         >
+            {/* Fondo con grano */}
+            <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+                <div
+                    className="absolute inset-0 opacity-8"
+                    style={{
+                        backgroundImage: `url(${grainImage})`,
+                    }}
+                ></div>
+            </div>
+
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="lg:pt-4 lg:pr-8">

@@ -111,15 +111,15 @@ const Hero = () => {
                 </div>
                 <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
                     <a href="#projects">
-                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer">
+                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer group">
                             <span className="font-semibold">Explore my projects</span>
-                            <EyeIcon className="size-5" />
+                            <EyeIcon className="size-5 group-hover:-rotate-45 transition-transform duration-300" />
                         </button>
                     </a>
                     <a href="#contact">
-                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer">
+                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer group">
                             <span className="font-semibold">Let's connect</span>
-                            <ClickIcon className="size-5" />
+                            <ClickIcon className="size-5 group-hover:rotate-45 transition-transform duration-300" />
                         </button>
                     </a>
                 </div>
