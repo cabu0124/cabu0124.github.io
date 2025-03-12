@@ -14,7 +14,7 @@ const portfolioProjects = [
         description: "Infinity Tower is a video game that blends role-playing adventures with musical learning, encouraging instrument practice in a fun and engaging way.",
         link: "https://youtu.be/XJrDw8x2gps",
         image: infinityTowerImg,
-        bgcolor: "gray",
+        bgcolor: "bg-gray-900 hover:bg-gray-800",
     },
     {
         company: "Personal",
@@ -23,7 +23,7 @@ const portfolioProjects = [
         description: "Movie Searcher is a simple web application that allows users to search for movies and view detailed information, including ratings, release dates, and summaries.",
         link: "https://movie-searcher-67ad6.web.app",
         image: movieSearcherImg,
-        bgcolor: "gray",
+        bgcolor: "bg-gray-900 hover:bg-gray-800",
     },
     {
         company: "Asesores LBA",
@@ -32,7 +32,7 @@ const portfolioProjects = [
         description: "This website was developed for Asesores LBA to showcase their service portfolio. It includes an integrated learning section linked to YouTube and a contact page.",
         link: "https://site-asesoreslba.web.app",
         image: asesoresLBAImg,
-        bgcolor: "gray",
+        bgcolor: "bg-gray-900 hover:bg-gray-800",
     },
 ];
 

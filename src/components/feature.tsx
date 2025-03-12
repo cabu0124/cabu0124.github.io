@@ -24,7 +24,7 @@ export default function Feature({
 }: FeatureProps) {
     return (
         <div
-            className={`rounded-3xl z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/15 after:pointer-events-none px-8 pt-8 sm:h-full lg:h-[420px] w-full max-w-7xl mx-auto sticky top-16 transition-all duration-300 bg-${bgcolor}-900 hover:bg-${bgcolor}-800`}
+            className={`rounded-3xl z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/15 after:pointer-events-none px-8 pt-8 sm:h-full lg:h-[420px] w-full max-w-7xl mx-auto sticky top-16 transition-all duration-300 ${bgcolor}`}
             style={{
                 top: `calc(64px + ${index * 30}px)`,
             }}
