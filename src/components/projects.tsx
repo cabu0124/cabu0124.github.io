@@ -1,10 +1,8 @@
 import infinityTowerImg from '../assets/images/infinity-tower.png'
 import movieSearcherImg from '../assets/images/movie-searcher.png'
 import asesoresLBAImg from '../assets/images/asesores-lba.png'
-//import grainImg from '../assets/images/grain.jpg'
 import Feature from './feature';
 import SectionHeader from './section-header';
-//import checkIcon from '../assets/icons/check-mark.svg';
 
 const portfolioProjects = [
     {
@@ -46,7 +44,7 @@ const Projects = () => {
             />
             <div className="flex flex-col mt-10 gap-20">
                 {portfolioProjects.map((project, index) => (
-                    <Feature index={index} label={project.company} year={project.year} title={project.title} description={project.description} imgUrl={project.image} link={project.link} bgcolor={project.bgcolor} />
+                    <Feature key={project.title} index={index} label={project.company} year={project.year} title={project.title} description={project.description} imgUrl={project.image} link={project.link} bgcolor={project.bgcolor} />
                 ))}
             </div>
         </div>

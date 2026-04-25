@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="absolute w-full h-full bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/10 [mask-image:linear-gradient(to_top,black,transparent)] -z-10"></div>
       <div className="container px-10 md:px-20">
         <div className="py-6 text-sm flex flex-col md:flex-row md:justify-between items-center gap-8">
-          <div className="text-white/40">&copy; 2025. All rights reserved.</div>
+          <div className="text-white/40">&copy; {new Date().getFullYear()}. All rights reserved.</div>
           <nav className="flex flex-col md:flex-row items-center gap-8">
             {siteConfig.contact.map(option => (
               <a href={option.link} key={option.text} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5">
