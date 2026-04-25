@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+      // gh-pages SPA fallback: preserve the requested path/query/hash and
+      // redirect to index.html so the client router can handle the route.
+      (function () {
+        var l = window.location;
+        var redirect = l.pathname + l.search + l.hash;
+        sessionStorage.setItem('redirect', redirect);
+        l.replace('/');
+      })();
+    </script>
+    <meta http-equiv="refresh" content="0; url=/" />
+  </head>
+  <body>
+    <p>Redirecting to <a href="/">home</a>…</p>
+  </body>
+</html>

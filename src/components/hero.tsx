@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import HeroOrbit from './hero-orbit';
 
 import brainImage from '../assets/images/artificial-intelligence.png';
@@ -13,6 +14,8 @@ import ClickIcon from '../assets/icons/click.svg?react';
 import { siteConfig } from "../app/config"
 
 const Hero = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="py-32 md:py-36 lg:py-48 relative z-0 overflow-x-clip">
             <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] -z-10">
@@ -110,18 +113,20 @@ const Hero = () => {
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-                    <a href="#projects">
-                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer group">
-                            <span className="font-semibold">Explore my projects</span>
-                            <EyeIcon className="size-5 group-hover:-rotate-45 transition-transform duration-300" />
-                        </button>
-                    </a>
-                    <a href="#contact">
-                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer group">
-                            <span className="font-semibold">Let's connect</span>
-                            <ClickIcon className="size-5 group-hover:rotate-45 transition-transform duration-300" />
-                        </button>
-                    </a>
+                    <button
+                        onClick={() => navigate('/#projects')}
+                        className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer group"
+                    >
+                        <span className="font-semibold">Explore my projects</span>
+                        <EyeIcon className="size-5 group-hover:-rotate-45 transition-transform duration-300" />
+                    </button>
+                    <button
+                        onClick={() => navigate('/#contact')}
+                        className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer group"
+                    >
+                        <span className="font-semibold">Let's connect</span>
+                        <ClickIcon className="size-5 group-hover:rotate-45 transition-transform duration-300" />
+                    </button>
                 </div>
             </div>
         </div>
