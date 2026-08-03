@@ -24,7 +24,7 @@ export const siteConfig = {
         },
     ],
 
-    // Skills
+    // Skills (flat list kept for back-compat; grouped view below drives the About page UI)
     skills: [
         { name: "azure", icon: "devicon-azure-plain" },
         { name: "devops", icon: "devicon-azuredevops-plain" },
@@ -46,6 +46,49 @@ export const siteConfig = {
         { name: "photoshop", icon: "devicon-photoshop-plain" },
         { name: "figma", icon: "devicon-figma-plain" },
         { name: "latex", icon: "devicon-latex-plain" },
+    ],
+
+    skillGroups: [
+        {
+            label: "Cloud & DevOps",
+            skills: [
+                { name: "azure", icon: "devicon-azure-plain" },
+                { name: "devops", icon: "devicon-azuredevops-plain" },
+                { name: "git", icon: "devicon-git-plain" },
+                { name: "kubernetes", icon: "devicon-kubernetes-plain" },
+                { name: "nodejs", icon: "devicon-nodejs-plain" },
+                { name: "mongodb", icon: "devicon-mongodb-plain" },
+                { name: "sql", icon: "devicon-azuresqldatabase-plain" },
+            ],
+        },
+        {
+            label: "Languages & Web",
+            skills: [
+                { name: "dotnet", icon: "devicon-dot-net-plain-wordmark" },
+                { name: "csharp", icon: "devicon-csharp-plain" },
+                { name: "angular", icon: "devicon-angular-plain" },
+                { name: "react", icon: "devicon-react-plain" },
+                { name: "typescript", icon: "devicon-typescript-plain" },
+                { name: "javascript", icon: "devicon-javascript-plain" },
+                { name: "html5", icon: "devicon-html5-plain" },
+                { name: "css3", icon: "devicon-css3-plain" },
+            ],
+        },
+        {
+            label: "Game Dev",
+            skills: [
+                { name: "unity", icon: "devicon-unity-plain" },
+                { name: "godot", icon: "devicon-godot-plain" },
+            ],
+        },
+        {
+            label: "Design & Docs",
+            skills: [
+                { name: "photoshop", icon: "devicon-photoshop-plain" },
+                { name: "figma", icon: "devicon-figma-plain" },
+                { name: "latex", icon: "devicon-latex-plain" },
+            ],
+        },
     ],
 
     // Education Data

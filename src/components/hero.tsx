@@ -23,6 +23,11 @@ const Hero = () => {
                     className="absolute inset-0 opacity-5 -z-30"
                     style={{ backgroundImage: `url(${grainImage})` }}
                 ></div>
+                {/* Dynamic gradient background: drifting color blobs + dot grid, sits behind the orbit rings */}
+                <div className="hero-blob top-[-10%] left-[4%] size-[480px] bg-m3-primary/35 animate-blob-1 -z-30"></div>
+                <div className="hero-blob top-[10%] right-[2%] size-[420px] bg-m3-tertiary/30 animate-blob-2 -z-30"></div>
+                <div className="hero-blob bottom-[-15%] left-[30%] size-[460px] bg-m3-secondary/30 animate-blob-3 -z-30"></div>
+                <div className="hero-dot-grid -z-30"></div>
                 <div className="size-[620px] hero-ring -z-20"></div>
                 <div className="size-[820px] hero-ring -z-20"></div>
                 <div className="size-[1020px] hero-ring -z-20"></div>
@@ -97,7 +102,7 @@ const Hero = () => {
                         loading="lazy"
                         className="rounded-lg shadow-lg py-2 animate-float"
                     />
-                    <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-3 rounded-lg">
+                    <div className="bg-m3-surface-container border border-m3-outline-variant px-4 py-1.5 inline-flex items-center gap-3 rounded-lg">
                         <div className="bg-green-500 relative size-2.5 rounded-full">
                             <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
                         </div>
@@ -105,7 +110,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="max-w-3xl mx-auto px-4">
-                    <h1 className="font-serif text-2xl md:text-5xl text-center mt-8 tracking-wide">
+                    <h1 className="font-serif text-2xl md:text-5xl text-center mt-8 tracking-wide bg-gradient-to-br from-white from-45% to-m3-primary bg-clip-text text-transparent drop-shadow-[0_2px_18px_rgba(0,0,0,0.45)]">
                         {siteConfig.about.title}
                     </h1>
                     <p className="mt-4 text-center text-white/60 md:text-lg">
@@ -115,14 +120,14 @@ const Hero = () => {
                 <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
                     <button
                         onClick={() => navigate('/#projects')}
-                        className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer group"
+                        className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-m3-surface-container-high hover:bg-white hover:text-m3-on-primary hover:border-white transition-all duration-300 cursor-pointer group"
                     >
                         <span className="font-semibold">Explore my projects</span>
                         <EyeIcon className="size-5 group-hover:-rotate-45 transition-transform duration-300" />
                     </button>
                     <button
                         onClick={() => navigate('/#contact')}
-                        className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-gray-800 hover:bg-white hover:text-gray-900 hover:border-white transition-all duration-300 cursor-pointer group"
+                        className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl text-white bg-m3-surface-container-high hover:bg-white hover:text-m3-on-primary hover:border-white transition-all duration-300 cursor-pointer group"
                     >
                         <span className="font-semibold">Let's connect</span>
                         <ClickIcon className="size-5 group-hover:rotate-45 transition-transform duration-300" />

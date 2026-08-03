@@ -32,25 +32,25 @@ const Header = () => {
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <button
           onClick={handleHomeClick}
-          className={`nav-item cursor-pointer ${location.pathname === '/' && !location.hash ? 'bg-white text-gray-900' : ''}`}
+          className={`nav-item cursor-pointer ${location.pathname === '/' && !location.hash ? 'bg-m3-primary text-m3-on-primary' : ''}`}
         >
           Home
         </button>
         <button
           onClick={() => handleNavClick('projects')}
-          className={`nav-item cursor-pointer ${location.hash === '#projects' ? 'bg-white text-gray-900' : ''}`}
+          className={`nav-item cursor-pointer ${location.hash === '#projects' ? 'bg-m3-primary text-m3-on-primary' : ''}`}
         >
           Projects
         </button>
         <button
           onClick={() => handleNavClick('about')}
-          className={`nav-item cursor-pointer ${location.hash === '#about' || location.pathname === '/about' ? 'bg-white text-gray-900' : ''}`}
+          className={`nav-item cursor-pointer ${location.hash === '#about' || location.pathname === '/about' ? 'bg-m3-primary text-m3-on-primary' : ''}`}
         >
           About
         </button>
         <button
           onClick={() => handleNavClick('contact')}
-          className={`nav-item cursor-pointer ${location.hash === '#contact' ? 'bg-white text-gray-900' : ''}`}
+          className={`nav-item cursor-pointer ${location.hash === '#contact' ? 'bg-m3-primary text-m3-on-primary' : ''}`}
         >
           Contact
         </button>

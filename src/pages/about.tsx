@@ -41,18 +41,25 @@ const About = () => {
                     </div>
                     <div>
                         <h3 className="text-lg font-semibold mb-4 text-white/90">Languages and Tools</h3>
-                        <div className="flex flex-wrap gap-4">
-                            {siteConfig.skills.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className="group relative p-2 bg-gray-800/50 border border-white/15 rounded-lg hover:bg-gray-700/50 transition-colors"
-                                >
-                                    <i
-                                        className={`${skill.icon} text-4xl text-white/80 group-hover:text-white group-hover:scale-110 inline-block transition-transform duration-300`}
-                                    ></i>
-                                    <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white/90 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                                        {skill.name.charAt(0).toUpperCase() + skill.name.slice(1)}
-                                    </span>
+                        <div className="flex flex-col gap-6">
+                            {siteConfig.skillGroups.map((group) => (
+                                <div key={group.label}>
+                                    <p className="text-sm font-bold uppercase tracking-wide text-m3-primary mb-2">{group.label}</p>
+                                    <div className="flex flex-wrap gap-4">
+                                        {group.skills.map((skill) => (
+                                            <div
+                                                key={skill.name}
+                                                className="group relative p-2 bg-m3-surface-container-high/50 border border-white/15 rounded-lg hover:bg-m3-surface-container-high transition-colors"
+                                            >
+                                                <i
+                                                    className={`${skill.icon} text-4xl text-white/80 group-hover:text-white group-hover:scale-110 inline-block transition-transform duration-300`}
+                                                ></i>
+                                                <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-m3-surface-container-high text-white/90 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                                    {skill.name.charAt(0).toUpperCase() + skill.name.slice(1)}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -69,17 +76,13 @@ const About = () => {
                     <p className="text-center text-white/60 mb-8">
                         A summary of my academic journey and qualifications.
                     </p>
-                    <ul className="bg-gray-900/50 border border-white/15 rounded-xl shadow-lg">
+                    <div className="relative pl-7">
+                        <div className="absolute left-[7px] top-1.5 bottom-1.5 w-0.5 bg-white/15"></div>
                         {siteConfig.education.map((item, index) => (
-                            <li
-                                key={index}
-                                className={`flex items-start gap-4 p-6 ${index !== siteConfig.education.length - 1
-                                    ? "border-b border-white/10"
-                                    : ""
-                                    } hover:bg-gray-800/50 transition-colors`}
-                            >
-                                <div className="flex-1">
-                                    <div className="text-sm font-semibold text-white/50">
+                            <div key={index} className="relative pb-7 last:pb-0">
+                                <div className="absolute -left-7 top-1 size-4 rounded-full bg-m3-primary ring-4 ring-m3-background"></div>
+                                <div className="bg-m3-surface-container/60 border border-white/15 rounded-xl shadow-lg p-6 hover:bg-m3-surface-container-high/60 transition-colors">
+                                    <div className="text-sm font-semibold text-m3-primary">
                                         {item.period}
                                     </div>
                                     <div className="text-lg font-semibold text-white/90 mt-1">
@@ -97,9 +100,9 @@ const About = () => {
                                         ))}
                                     </ul>
                                 </div>
-                            </li>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 </div>
 
                 {/* Subsección de Experiencia Laboral */}
@@ -112,17 +115,13 @@ const About = () => {
                     <p className="text-center text-white/60 mb-8">
                         A summary of my professional journey and key roles.
                     </p>
-                    <ul className="bg-gray-900/50 border border-white/15 rounded-xl shadow-lg">
+                    <div className="relative pl-7">
+                        <div className="absolute left-[7px] top-1.5 bottom-1.5 w-0.5 bg-white/15"></div>
                         {siteConfig.experience.map((item, index) => (
-                            <li
-                                key={index}
-                                className={`flex items-start gap-4 p-6 ${index !== siteConfig.experience.length - 1
-                                    ? "border-b border-white/10"
-                                    : ""
-                                    } hover:bg-gray-800/50 transition-colors`}
-                            >
-                                <div className="flex-1">
-                                    <div className="text-sm font-semibold text-white/50">
+                            <div key={index} className="relative pb-7 last:pb-0">
+                                <div className="absolute -left-7 top-1 size-4 rounded-full bg-m3-tertiary ring-4 ring-m3-background"></div>
+                                <div className="bg-m3-surface-container/60 border border-white/15 rounded-xl shadow-lg p-6 hover:bg-m3-surface-container-high/60 transition-colors">
+                                    <div className="text-sm font-semibold text-m3-tertiary">
                                         {item.period}
                                     </div>
                                     <div className="text-lg font-semibold text-white/90 mt-1">
@@ -137,9 +136,9 @@ const About = () => {
                                         ))}
                                     </ul>
                                 </div>
-                            </li>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>

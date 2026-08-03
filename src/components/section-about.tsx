@@ -34,7 +34,7 @@ const SectionAbout = () => {
                 <div className="mt-8 flex justify-center">
                     <button
                         onClick={handleNavigate}
-                        className="inline-flex items-center gap-2 border border-white/20 shadow-lg px-6 h-12 rounded-xl bg-gray-900/70 text-white font-semibold hover:bg-gray-800/80 hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                        className="inline-flex items-center gap-2 border border-white/20 shadow-lg px-6 h-12 rounded-xl bg-m3-surface-container/70 text-white font-semibold border-white/20 hover:bg-m3-primary/15 hover:border-m3-primary/40 hover:shadow-xl transition-all duration-300 cursor-pointer group"
                     >
                         <span className="font-semibold">Know more</span>
                         <ArrowRightIcon className="text-icon size-5 group-hover:-rotate-45 transition-transform duration-300" />

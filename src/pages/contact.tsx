@@ -4,7 +4,7 @@ import { siteConfig } from "../app/config"
 
 const Contact = () => {
     return (
-        <div className="relative py-24 md:py-28 lg:py-32 text-white overflow-x-clip bg-gray-800">
+        <div className="relative py-24 md:py-28 lg:py-32 text-white overflow-x-clip bg-m3-surface-container">
             {/* Fondo con grano */}
             <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
                 <div
@@ -27,7 +27,7 @@ const Contact = () => {
                 {/* Botón de LinkedIn */}
                 <div className="mt-8">
                     <a href={siteConfig.contact[0].link} target="_blank" rel="noopener noreferrer">
-                        <button className="inline-flex items-center gap-2 border border-white/20 shadow-lg px-6 h-12 rounded-xl bg-gray-900/70 text-white font-semibold hover:bg-gray-800/80 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                        <button className="inline-flex items-center gap-2 border border-white/20 shadow-lg px-6 h-12 rounded-xl bg-m3-surface-container-high/70 text-white font-semibold hover:bg-m3-primary/15 hover:border-m3-primary/40 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                             <span className="font-semibold">Contact Me</span>
                             <ArrowRightIcon className="text-icon size-5 group-hover:-rotate-45 transition-transform duration-300" />
                         </button>
